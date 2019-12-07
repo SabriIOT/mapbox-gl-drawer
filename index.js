@@ -23,8 +23,8 @@ const setupDraw = function(options, api) {
   return api;
 };
 
-module.exports = function(options) {
+export default function(options) {
   setupDraw(options, this);
-};
+}
 
-module.exports.modes = require('./src/modes');
+export const modes = require('./src/modes');

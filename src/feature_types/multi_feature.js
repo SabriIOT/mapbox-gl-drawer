@@ -78,4 +78,4 @@ MultiFeature.prototype.getFeatures = function() {
   return this.features;
 };
 
-module.exports = MultiFeature;
+export default  MultiFeature;

@@ -4,7 +4,7 @@ const ui = require('./ui');
 const Constants = require('./constants');
 const xtend = require('xtend');
 
-module.exports = function(ctx) {
+export default function(ctx) {
 
   let controlContainer = null;
   let mapLoadedInterval = null;
@@ -127,4 +127,4 @@ module.exports = function(ctx) {
   ctx.setup = setup;
 
   return setup;
-};
+}

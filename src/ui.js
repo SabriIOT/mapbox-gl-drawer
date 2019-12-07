@@ -3,7 +3,7 @@ const Constants = require('./constants');
 
 const classTypes = ['mode', 'feature', 'mouse'];
 
-module.exports = function(ctx) {
+export default  function(ctx) {
 
 
   const buttonElements = {};

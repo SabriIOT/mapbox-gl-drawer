@@ -68,4 +68,4 @@ Polygon.prototype.updateCoordinate = function(path, lng, lat) {
   this.coordinates[ringId][coordId] = [lng, lat];
 };
 
-module.exports = Polygon;
+export default  Polygon;

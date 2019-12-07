@@ -4,7 +4,7 @@ const StringSet = require('./lib/string_set');
 const render = require('./render');
 const interactions = require('./constants').interactions;
 
-const Store = module.exports = function(ctx) {
+const Store = function(ctx) {
   this._features = {};
   this._featureIds = new StringSet();
   this._selectedFeatureIds = new StringSet();
@@ -337,3 +337,5 @@ Store.prototype.getInitialConfigValue = function(interaction) {
     return true;
   }
 };
+
+export default Store;

@@ -16,4 +16,4 @@ function mouseEventPoint(mouseEvent, container) {
   );
 }
 
-module.exports = mouseEventPoint;
+export default  mouseEventPoint;

@@ -138,4 +138,4 @@ DrawPolygon.onTrash = function(state) {
   this.changeMode(Constants.modes.SIMPLE_SELECT);
 };
 
-module.exports = DrawPolygon;
+export default DrawPolygon;

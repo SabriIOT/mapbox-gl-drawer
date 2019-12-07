@@ -34,4 +34,4 @@ function sortFeatures(features) {
   });
 }
 
-module.exports = sortFeatures;
+export default  sortFeatures;

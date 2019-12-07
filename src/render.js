@@ -1,6 +1,6 @@
 const Constants = require('./constants');
 
-module.exports = function render() {
+export default function render() {
   const store = this;
   const mapExists = store.ctx.map && store.ctx.map.getSource(Constants.sources.HOT) !== undefined;
   if (!mapExists) return cleanup();
@@ -86,4 +86,4 @@ module.exports = function render() {
     store.isDirty = false;
     store.clearChangedIds();
   }
-};
+}

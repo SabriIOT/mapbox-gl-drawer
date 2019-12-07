@@ -26,7 +26,7 @@ var emptyStyle = {
     "layers": [],
 }
 
-module.exports = function(options) {
+export default  function(options) {
     var evented = util.extend({}, Evented);
 
     var background = options.createMap({'container': 'backmap', width:1024});

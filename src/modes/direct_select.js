@@ -233,5 +233,5 @@ DirectSelect.onTouchEnd = DirectSelect.onMouseUp = function(state) {
   this.stopDragging(state);
 };
 
-module.exports = DirectSelect;
+export default DirectSelect;
 

@@ -5,7 +5,7 @@ const LineString = require('../feature_types/line_string');
 const Polygon = require('../feature_types/polygon');
 const MultiFeature = require('../feature_types/multi_feature');
 
-const ModeInterface = module.exports = function(ctx) {
+const ModeInterface = function(ctx) {
   this.map = ctx.map;
   this.drawConfig = JSON.parse(JSON.stringify(ctx.options || {}));
   this._ctx = ctx;
@@ -219,3 +219,4 @@ ModeInterface.prototype.doRender = function(id) {
   return this._ctx.store.featureChanged(id);
 };
 
+export default ModeInterface;

@@ -43,7 +43,7 @@ function addSources(styles, sourceBucket) {
   });
 }
 
-module.exports = function(options = {}) {
+export default function(options = {}) {
   let withDefaults = xtend(options);
 
   if (!options.controls) {
@@ -62,4 +62,4 @@ module.exports = function(options = {}) {
   withDefaults.styles = addSources(withDefaults.styles, 'cold').concat(addSources(withDefaults.styles, 'hot'));
 
   return withDefaults;
-};
+}

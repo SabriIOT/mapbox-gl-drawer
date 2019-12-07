@@ -8,7 +8,7 @@ var fpsRunner = require('../lib/fps');
 var TraceMouse = require('../lib/mouse_trace');
 var traceProgress = require('../lib/trace_progress');
 
-module.exports = function(options) {
+export default  function(options) {
     var evented = util.extend({}, Evented);
 
     var out = options.createMap({width:1024});

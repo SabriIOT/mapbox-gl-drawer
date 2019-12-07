@@ -1,4 +1,4 @@
-module.exports = function(map) {
+export default  function(map) {
   var events = [];
 
   events.push = function(event, point, dp) {

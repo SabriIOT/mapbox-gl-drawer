@@ -32,4 +32,4 @@ LineString.prototype.updateCoordinate = function(path, lng, lat) {
   this.changed();
 };
 
-module.exports = LineString;
+export default  LineString;

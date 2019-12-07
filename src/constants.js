@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   classes: {
     CONTROL_BASE: 'mapboxgl-ctrl',
     CONTROL_PREFIX: 'mapboxgl-ctrl-',

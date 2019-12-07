@@ -62,4 +62,4 @@ DrawPoint.onKeyUp = function(state, e) {
   }
 };
 
-module.exports = DrawPoint;
+export default DrawPoint;

@@ -1,7 +1,7 @@
 const featuresAt = require('./features_at');
 const Constants = require('../constants');
 
-module.exports = function getFeatureAtAndSetCursors(event, ctx) {
+export default  function getFeatureAtAndSetCursors(event, ctx) {
   const features = featuresAt.click(event, null, ctx);
   const classes = { mouse: Constants.cursors.NONE };
 

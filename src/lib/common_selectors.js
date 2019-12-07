@@ -1,6 +1,6 @@
 const Constants = require('../constants');
 
-module.exports = {
+export default  {
   isOfMetaType: function(type) {
     return function(e) {
       const featureTarget = e.featureTarget;

@@ -8,7 +8,7 @@ var DrawMouse = require('../lib/mouse_draw');
 
 var START = {x: 189, y: 293}
 
-module.exports = function(options) {
+export default  function(options) {
     var evented = util.extend({}, Evented);
 
     var out = options.createMap();

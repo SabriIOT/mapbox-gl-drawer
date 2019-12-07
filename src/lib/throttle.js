@@ -26,4 +26,4 @@ function throttle(fn, time, context) {
   return wrapperFn;
 }
 
-module.exports = throttle;
+export default  throttle;

@@ -9,7 +9,7 @@ var DragMouse = require('../lib/mouse_drag');
 
 var START = {x: 445, y: 293}
 
-module.exports = function(options) {
+export default  function(options) {
     var evented = util.extend({}, Evented);
 
     var out = options.createMap({width: 1024});

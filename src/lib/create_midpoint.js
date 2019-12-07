@@ -1,6 +1,6 @@
 const Constants = require('../constants');
 
-module.exports = function(parent, startVertex, endVertex, map) {
+export default  function(parent, startVertex, endVertex, map) {
   const startCoord = startVertex.geometry.coordinates;
   const endCoord = endVertex.geometry.coordinates;
 

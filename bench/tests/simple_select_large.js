@@ -12,7 +12,7 @@ var START = {
   y: 278
 }
 
-module.exports = function(options) {
+export default  function(options) {
     var evented = util.extend({}, Evented);
 
     var out = options.createMap({width:1024});

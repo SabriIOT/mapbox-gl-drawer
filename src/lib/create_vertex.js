@@ -11,7 +11,7 @@ const Constants = require('../constants');
  * @param {boolean} selected
  * @return {GeoJSON} Point
  */
-module.exports = function(parentId, coordinates, path, selected) {
+export default  function(parentId, coordinates, path, selected) {
   return {
     type: Constants.geojsonTypes.FEATURE,
     properties: {

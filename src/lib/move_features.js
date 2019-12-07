@@ -1,7 +1,7 @@
 const constrainFeatureMovement = require('./constrain_feature_movement');
 const Constants = require('../constants');
 
-module.exports = function(features, delta) {
+export default  function(features, delta) {
   const constrainedDelta = constrainFeatureMovement(features.map(feature => feature.toGeoJSON()), delta);
 
   features.forEach(feature => {

@@ -1,3 +1,5 @@
+import ModeInterface from "./mode_interface";
+
 const CommonSelectors = require('../lib/common_selectors');
 const mouseEventPoint = require('../lib/mouse_event_point');
 const createSupplementaryPoints = require('../lib/create_supplementary_points');
@@ -375,4 +377,4 @@ SimpleSelect.onUncombineFeatures = function() {
   this.fireActionable();
 };
 
-module.exports = SimpleSelect;
+export default SimpleSelect;

@@ -1,6 +1,6 @@
 const xtend = require('xtend');
 
-module.exports = function(lng = 0, lat = 0, eventProperties = {}) {
+export default  function(lng = 0, lat = 0, eventProperties = {}) {
   const e = {
     originalEvent: xtend({
       stopPropagation: function() {},

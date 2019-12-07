@@ -1,4 +1,4 @@
-const ModeInterface = module.exports = require('./mode_interface_accessors');
+const ModeInterface = require('./mode_interface_accessors');
 
 /**
  * Triggered while a mode is being transitioned into.
@@ -144,3 +144,4 @@ ModeInterface.prototype.toDisplayFeatures = function() {
   throw new Error('You must overwrite toDisplayFeatures');
 };
 
+export default ModeInterface;

@@ -1,4 +1,4 @@
-module.exports = function(start) {
+export default  function(start) {
   var path = [];
 
   for (var i = 0; i<7; i+=.04) {

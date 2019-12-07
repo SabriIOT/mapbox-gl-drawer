@@ -14,7 +14,7 @@ const {
 // - any part of any feature to exceed the poles
 // - any feature to be completely lost in the space between the projection's
 //   edge and the poles, such that it couldn't be re-selected and moved back
-module.exports = function(geojsonFeatures, delta) {
+export default  function(geojsonFeatures, delta) {
   // "inner edge" = a feature's latitude closest to the equator
   let northInnerEdge = LAT_MIN;
   let southInnerEdge = LAT_MAX;

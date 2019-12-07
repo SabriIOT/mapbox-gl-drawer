@@ -10,7 +10,7 @@ const META_TYPES = [
 ];
 
 // Requires either event or bbox
-module.exports = {
+export default  {
   click: featuresAtClick,
   touch: featuresAtTouch
 };

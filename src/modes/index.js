@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   simple_select: require('./simple_select'),
   direct_select: require('./direct_select'),
   draw_point: require('./draw_point'),

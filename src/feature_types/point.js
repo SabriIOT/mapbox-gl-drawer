@@ -24,4 +24,4 @@ Point.prototype.getCoordinate = function() {
   return this.getCoordinates();
 };
 
-module.exports = Point;
+export default  Point;

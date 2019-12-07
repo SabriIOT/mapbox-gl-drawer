@@ -3,7 +3,7 @@ const euclideanDistance = require('./euclidean_distance');
 const TOLERANCE = 25;
 const INTERVAL = 250;
 
-module.exports = function isTap(start, end, options = {}) {
+export default  function isTap(start, end, options = {}) {
   const tolerance = (options.tolerance != null) ? options.tolerance : TOLERANCE;
   const interval = (options.interval != null) ? options.interval : INTERVAL;
 

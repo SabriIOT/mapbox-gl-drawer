@@ -1,4 +1,4 @@
-module.exports = function() {
+export default  function() {
   var frameCount = 0;
   var start = null;
   var running = false;
