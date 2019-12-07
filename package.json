@@ -1,8 +1,8 @@
 {
-  "name": "@mapbox/mapbox-gl-draw",
-  "version": "1.1.2",
+  "name": "@mapbox/mapbox-gl-drawer",
+  "version": "1.0.0",
   "description": "A drawing component for Mapbox GL JS",
-  "homepage": "https://github.com/mapbox/mapbox-gl-draw",
+  "homepage": "https://github.com/sabriiot/mapbox-gl-drawer",
   "author": "mapbox",
   "license": "ISC",
   "main": "index.js",
@@ -22,14 +22,15 @@
     "tape": "tape -r ./test/mock-browser.js -r @babel/register test/*.test.js",
     "coverage": "NODE_ENV=test nyc --reporter html npm run tape && opener coverage/index.html",
     "build-token": "node build/generate-access-token-script.js",
-    "build": "NODE_ENV=production browserify index.js --standalone MapboxDraw > dist/mapbox-gl-draw-unminified.js",
-    "build-min": "NODE_ENV=production browserify index.js --standalone MapboxDraw | uglifyjs -c -m > dist/mapbox-gl-draw.js",
+    "build": "SET NODE_ENV=production browserify index.js --standalone MapboxDraw > dist/mapbox-gl-draw-unminified.js",
+    "build-min": "SET NODE_ENV=production browserify index.js --standalone MapboxDraw | uglifyjs -c -m > dist/mapbox-gl-draw.js",
     "prepublish": "npm run build && npm run build-min",
+    "build-prod": "webpack -p --mode production",
     "start": "npm run build-token && node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/mapbox-gl-draw.git"
+    "url": "git://github.com/sabriiot/mapbox-gl-drawer.git"
   },
   "keywords": [
     "webgl",
@@ -38,49 +39,86 @@
     "drawing"
   ],
   "bugs": {
-    "url": "https://github.com/mapbox/mapbox-gl-draw/issues"
+    "url": "https://github.com/sabriiot/mapbox-gl-drawer/issues"
   },
   "nyc": {
     "sourceMap": false,
     "instrument": false
   },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
     "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.7.4",
     "@mapbox/mapbox-gl-draw-static-mode": "^1.0.1",
     "@turf/centroid": "^6.0.0",
-    "babel-eslint": "^8.0.3",
+    "babel-eslint": "8.2.3",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.0",
     "babelify": "^10.0.0",
     "browserify": "^16.1.1",
     "browserify-middleware": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "core-js": "3",
+    "css-loader": "^3.2.1",
     "envify": "^4.0.0",
-    "eslint": "^4.2.0",
+    "eslint": "^5.15.1",
     "eslint-config-mourner": "^2.0.1",
+    "eslint-config-react-airbnb-prettier": "0.0.10",
+    "eslint-import-resolver-webpack": "^0.10.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-cypress": "^2.6.1",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
     "express": "^4.13.4",
     "mapbox-gl": "0.51.0",
     "mapbox-gl-js-mock": "0.28.0",
     "mock-browser": "^0.92.10",
     "nyc": "^12.0.1",
     "opener": "^1.4.1",
+    "sass-loader": "^8.0.0",
     "sinon": "5.0.0",
+    "style-loader": "^1.0.1",
     "synthetic-dom-events": "0.3.0",
     "tape": "^4.0.0",
     "uglify-js": "^3.0.22",
-    "unassertify": "^2.0.3"
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "unassertify": "^2.0.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "peerDependencies": {
     "mapbox-gl": ">=0.27.0 <2.0.0"
   },
   "dependencies": {
     "@mapbox/geojson-area": "^0.2.1",
+    "@mapbox/geojson-extent": "^0.3.2",
     "@mapbox/geojson-normalize": "0.0.1",
     "@mapbox/geojsonhint": "^2.0.0",
-    "@mapbox/geojson-extent": "^0.3.2",
+    "@mapbox/point-geometry": "0.1.0",
     "hat": "0.0.3",
     "lodash.isequal": "^4.2.0",
-    "@mapbox/point-geometry": "0.1.0",
     "xtend": "^4.0.1"
   }
 }
